@@ -16,6 +16,7 @@ final class MediaPreviewTransitionController: NSObject {
     private var panGestureRecognizer: UIPanGestureRecognizer = {
         let gestureRecognizer = UIPanGestureRecognizer()
         gestureRecognizer.maximumNumberOfTouches = 1
+        gestureRecognizer.allowedScrollTypesMask = .continuous
         return gestureRecognizer
     }()
     private var dismissInteractiveTransitioning: MediaHostToMediaPreviewViewControllerAnimatedTransitioning?
